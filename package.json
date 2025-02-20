@@ -1,10 +1,27 @@
 {
   "name": "hardhat-project",
+  "scripts": {
+    "sepolia": "npx hardhat run scripts/deploy.ts --network sepolia",
+    "hardhat": "npx hardhat run scripts/deploy.ts --network localhost",
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "node": "npx hardhat node",
+    "use:hardhat": "node scripts/switch-network.js hardhat",
+    "use:sepolia": "node scripts/switch-network.js sepolia",
+    "dev:hardhat": "npm run use:hardhat && cd frontend && npm run dev",
+    "dev:sepolia": "npm run use:sepolia && cd frontend && npm run dev"
+  },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "hardhat": "^2.22.18"
+    "@types/node": "^20.11.19",
+    "hardhat": "^2.22.18",
+    "semver": "^7.5.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
-    "dotenv": "^16.4.7"
+    "@openzeppelin/contracts": "^5.2.0",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.11.1"
   }
 }

@@ -1,0 +1,13 @@
+{
+  "css.validate": false,
+  "tailwindCSS.experimental.classRegex": [],
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "css": "css",
+    "typescript": "typescript"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  }
+}
